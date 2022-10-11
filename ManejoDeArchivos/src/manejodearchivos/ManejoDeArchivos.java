@@ -1,21 +1,30 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+-Crear archivo
+-Guardar infor. en un archivo
+-Eliminar infor. de un archivo
  */
 package manejodearchivos;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
 /**
  *
- * @author Alumno Mañana
+ * @author Nacho L.C.
  */
 public class ManejoDeArchivos {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void crearArchivo(String nombre) {
+        //Creo objeto de tipo File donde paso el nombre del fichero
+        File archivo=new File(nombre);
+        try{
+            PrintWriter salida= new PrintWriter(archivo);
+            salida.close();
+        //Creo una excepción ya que puede que no exista el archivo en el que quiero escribir
+        }catch (FileNotFoundException ex){
+            ex.printStackTrace (System.out);
+        }
     }
     
 }
