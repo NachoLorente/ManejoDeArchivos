@@ -12,6 +12,7 @@ import manejodearchivos.ManejoDeArchivos;
 public class PPal {
     
     public static void main(String[] args){
+        //Creamos archivo
         String nombreArchivo="prueba.txt";
         ManejoDeArchivos.crearArchivo(nombreArchivo);
     }
